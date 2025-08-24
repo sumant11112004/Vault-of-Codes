@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Colorful Recipes — Cook & Learn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+
+    <!-- Recipe List -->
+    <section id="recipe-list" class="view view--visible">
+      <h1 class="page-title">🍽️ Choose a Recipe</h1>
+      <p class="subtitle">Click <strong>Start Cooking</strong> on any dish to begin (timer starts automatically).</p>
+
+      <div class="grid">
+        <!-- Chocolate Cake -->
+        <article class="card card--cake" data-key="cake">
+          <img class="card-img" src="https://th.bing.com/th/id/R.36ff11c02e380223c7d1c38e74e10fbc?rik=uSjQGZAEJJrakw&riu=http%3a%2f%2frecipessmile.com%2fwp-content%2fuploads%2f2023%2f10%2fchocolate-cake.webp&ehk=l0VsDQAU%2bzlv4AyWpuB0xMA7xYhe1oh3VP8SKSHaJow%3d&risl=&pid=ImgRaw&r=0" alt="Chocolate Cake">
+          <div class="card-body">
+            <h2>Chocolate Cake</h2>
+            <p>Rich, moist chocolate cake.</p>
+            <button class="start-btn">Start Cooking</button>
+          </div>
+        </article>
+
+        <!-- Salad -->
+        <article class="card card--salad" data-key="salad">
+          <img class="card-img" src="https://th.bing.com/th/id/R.384b8d7a83051d70053a9406c4bc3f36?rik=H9vJLB%2fXGYV2QA&riu=http%3a%2f%2fstatic4.depositphotos.com%2f1004288%2f312%2fi%2f950%2fdepositphotos_3124506-Fresh-spring-vegetable-salad.jpg&ehk=lrT6woBOISXmoyhxGT5dhTAyeV5G1tNbfCOERl%2fvumg%3d&risl=&pid=ImgRaw&r=0" alt="Salad">
+          <div class="card-body">
+            <h2>Salad</h2>
+            <p>Fresh greens with zingy dressing.</p>
+            <button class="start-btn">Start Cooking</button>
+          </div>
+        </article>
+
+        <!-- Pasta -->
+        <article class="card card--pasta" data-key="pasta">
+          <img class="card-img" src="https://th.bing.com/th/id/OIP.BTjk2eoQk_MlhES166t-JAHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pasta">
+          <div class="card-body">
+            <h2>Pasta</h2>
+            <p>Garlicky tomato pasta.</p>
+            <button class="start-btn">Start Cooking</button>
+          </div>
+        </article>
+
+        <!-- Pizza -->
+        <article class="card card--pizza" data-key="pizza">
+          <img class="card-img" src="https://cdn.britannica.com/08/177308-050-94D9D6BE/Food-Pizza-Basil-Tomato.jpg" alt="Pizza">
+          <div class="card-body">
+            <h2>Pizza</h2>
+            <p>Classic Margherita goodness.</p>
+            <button class="start-btn">Start Cooking</button>
+          </div>
+        </article>
+
+        <!-- Burger -->
+        <article class="card card--burger" data-key="burger">
+          <img class="card-img" src="https://th.bing.com/th/id/OIP.JnUimTk9WEG9Kz7RWBgmhwHaEu?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Burger">
+          <div class="card-body">
+            <h2>Burger</h2>
+            <p>Juicy burger with melty cheese.</p>
+            <button class="start-btn">Start Cooking</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cooking View -->
+    <section id="cook-view" class="view view--hidden" aria-hidden="true">
+      <div class="cook-header">
+        <button id="backBtn" class="btn btn-ghost">← Back to Recipes</button>
+        <h2 id="cook-title" class="cook-title">Recipe Title</h2>
+      </div>
+
+      <figure class="cook-figure">
+        <img id="cook-image" src="" alt="" class="cook-image">
+      </figure>
+
+      <div class="timer-row">
+        <div class="timer-label">Timer</div>
+        <div id="timer" class="timer">00:00</div>
+      </div>
+
+      <div class="controls">
+        <button id="toggleIngredients" class="btn btn-pill">Show Ingredients</button>
+        <button id="nextStep" class="btn btn-accent">Next Step →</button>
+      </div>
+
+      <div id="ingredientsCard" class="ingredients hidden"></div>
+
+      <ol id="stepsList" class="steps"></ol>
+
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sumant Kumar - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8">
+    <div class="fixed top-0 right-0 width-11/12 -z-10 translate-y-[-80%]">
+        <img src="./images/header-bg-color.png" alt="" class="w-full">
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+        <img src="./images/logo1.png" alt="" class="w-28 cursor-pointer mr-14">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Skills">Skill</a></li>
+            <li><a href="#work">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+    
+        <a class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo" href="#connect">
+            Connect Me 
+            <img src="./images/arrow-icon.png" alt="" class="w-3"></a>
+
+            <button onclick="openMenu()" class="block md:hidden ml-3">
+                <img src="./images/menu-black.png" alt="" class="w-6">
+            </button>
+        </div>
+        <div>
+            <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-40 z-50 h-screen bg-blue-300 transition duration-500">
+                <div onclick="closeMenu()" class="absolute right-6 top-6">
+                    <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer">
+                </div>
+
+                <li><a onclick="closeMenu()" href="#top">Home</a></li>
+                <li><a onclick="closeMenu()" href="#about">About</a></li>
+                <li><a onclick="closeMenu()" href="#Skills">Skill</a></li>
+                <li><a onclick="closeMenu()" href="#work">Project</a></li>
+                <li><a onclick="closeMenu()" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-----------------Header ------------------------------->
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img src="./images/profile-img.png" alt="" class="rounded-full mt-50 md:mt-10 w-32">
+
+        <h1 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hello, I'm Sumant Kumar <img src="./images/hand-icon.png" alt="" class="w-6"></h1>
+        
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">Full Stack Developer</h1>
+        <p class="max-w-2xl mx-auto">I am a undergraduate student at Bansal Institute of Research & Technology, pursuing Bachelor of Technology (B.Tech) in Computer Science. I'm passionate about bringing accessibility
+             to the digital interface and working on making technologies products more inclusive for a larger, more diverse user base.
+              Also a Minimalist who believes less is more.</p>
+       
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#15e815] to-[#5bc4ed] text-white flex items-center gap-2">Contact  Me<img src="./images/right-arrow-white.png" class="w-4" alt=""></a>
+            <a href="./files/Resume.pdf" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white">My Resume<img src="./images/download-icon.png" class="w-4" alt=""></a>
+        </div>
+    </div>
+
+    <!------------------About Me ---------------->
+
+    <div id="about" class="w-full px-[12%] py-10 mt-40 scroll-mt-15">
+        <h4 class="text-center mb-2 text-lg">Introduction</h4>
+        <h2 class="text-center text-5xl">About Me</h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative ">
+                <img src="./images/user_image.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
+                <div class="bg-white w-1/4 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                
+                    <img src="./images/dev-icon.png" alt="" class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                    
+                </div>
+            </div>
+
+            <div class="flex-1 ">
+                <p class="mb-10 max-w-2xl ">Hi, I’m Sumant Kumar — an artist at heart and a tech enthusiast by passion.
+I’m currently pursuing my B.Tech in Computer Science and Engineering, where I explore the blend of creativity and technology. From designing visually appealing projects to building functional digital solutions, I love turning ideas into reality.
+When I’m not immersed in code or design, you’ll find me sketching, experimenting with creative concepts, or learning something new to challenge my limits. I enjoy working independently, but I value collaboration when it means creating something extraordinary.
+My goal is simple: to create meaningful work that inspires, solves problems, and leaves a lasting impression.</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img src="./images/code-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-800">Languages</h3>
+                        <p class="text-gray-600 text:sm">C, C++, Java, Python, HTML, CSS, JavaScript, React Js, Node Js</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img src="./images/edu-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-800">Education</h3>
+                        <p class="text-gray-600 text:sm">B.Tech in Computer Science</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img src="./images/project-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-800">Project</h3>
+                        <p class="text-gray-600 text:sm">Built more than 5 projects</p>
+                    </li>
+                </ul>
+                <h4 class="my-6 text-gray-700">Tools I used</h4>
+                <ul class="flex items-center justify-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+                        <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+                        <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+                        <img src="./images/github.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+                        <img src="./images/eclipse.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+                        <img src="./images/pycharm.jpeg" alt="" class="w-5 sm:w-7">
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!------------------Skills ---------------->
+
+    <div id="Skills" class="w-full px-[12%] py-10 scroll-mt-15">
+       
+        <h2 class="text-center mb-4 text-5xl">Skills</h2>
+
+        <h4 class="text-center mb-1 text-lg">Core capabilities that drive innovative and effective digital solutions</h4>
+
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">An integration of technical proficiency and creative innovation, these skills encompass the tools and technologies I employ to design, develop, and deliver effective, high-quality digital solutions.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10 ">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500">
+                <img src="./images/skill.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-900">Technical Skill</h3>
+                <p class="text-sm text-gray-800 leading-5 "> 
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Python, Java, C++, JavaScript</li>
+                        <li>HTML, CSS, Tailwind CSS, React</li>
+                        <li>Node.js, MySQL, MongoDB</li>
+                        <li>Git/GitHub, VS Code</li>
+                    </ul></p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5 ">Read More <img src="./images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500">
+                <img src="./images/creative.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-900">Creative & Design Skills</h3>
+                <p class="text-sm text-gray-800 leading-5 ">
+                    <ul class="space-y-2 text-gray-700">
+                        <li>UI/UX Design Principles</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Graphic Design (Photoshop, Canva)</li>
+                        <li>Branding & Visual Storytelling</li>
+                    </ul>
+                </p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5 ">Read More <img src="./images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500">
+                <img src="./images/soft_skill.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-900">Soft Skills</h3>
+                <p class="text-sm text-gray-800 leading-5 ">
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Problem-Solving</li>
+                        <li>Adaptability</li>
+                        <li>Attention to Detail</li>
+                        <li>Team Collaboration</li>
+                    </ul>
+                </p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5 ">Read More <img src="./images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+        </div>
+    </div>
+
+
+<!------------------Project---------------->
+
+<div id="work" class="w-full px-[12%] py-10 scroll-mt-15">
+        <h4 class="text-center mb-2 text-lg">My work</h4>
+
+        <h3 class="text-center text-5xl">Project</h3>
+
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">A collection of my work showcasing creativity, technical skills, and problem-solving ability. Each project reflects my approach to building efficient, user-friendly, and visually appealing solutions—whether it’s a personal experiment or a real-world application.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10 ">
+
+            <div class="aspect-square bg-[url('./images/movie_recommendation.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Movie Recommendation Syatem</h2>
+                        <p class="text-sm text-gray-700">using python, css, html</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </div>
+                </div>
+            </div>
+     
+
+            <div class="aspect-square bg-[url('./images/alexa.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Alexa</h2>
+                        <p class="text-sm text-gray-700">Using Python</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </div>
+                </div>
+            </div>
+       
+            <div class="aspect-square bg-[url('./images/turtle_race.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Turtle Race</h2>
+                        <p class="text-sm text-gray-700">Using python</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </div>
+                </div>
+            </div>
+       
+            <div class="aspect-square bg-[url('./images/snake_game.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Snake Game</h2>
+                        <p class="text-sm text-gray-700">Using Python</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="aspect-square bg-[url('./images/chatbot.jpeg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Chat Bot</h2>
+                        <p class="text-sm text-gray-700">using python</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+             <div class="aspect-square bg-[url('./images/doctor_appointment.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Doctor Appointment Syatem</h2>
+                        <p class="text-sm text-gray-700">using MERN stack (ongoing)</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-800 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-15 hover:bg-[#fcf4ff] duration-500">Show More
+            <img src="./images/right-arrow-bold.png" alt="" class="w-4">
+        </a>
+</div>
+
+
+
+<!------------------Contact---------------->
+
+<div>
+      <div id="contact"  class='w-full px-[12%] py-10 scroll-mt-15 text-center text-2xl pt-10 text-gray-800'>
+        <p>Contact <span class='text-gray-700 font-semibold'>Info</span></p>
+      </div>
+      <div class='flex flex-col justify-center md:flex-row gap-2 mb-10 text-sm'>
+        <img class='w-full md:max-w-[360px]' src="./images/contact.png" alt="" />
+        <div class='flex flex-col justify-center items-start gap-6'>
+          <p class='font-semibold text-xl text-gray-900'>Details</p>
+          <p class='text-lg text-gray-700'>Address: <br /> Bansal Institue of Research & Technology <br />Kokta, Bhopal, Madhya Pradesh Pin: 462021</p>
+          <p class='text-lg text-gray-700'>Phone: +91-7488819884 <br />Email: sumantkumar11112004@gmail.com</p>
+          <p class='font-semibold text-l text-gray-900' >Social Media</p>
+
+          <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a href="https://www.instagram.com/sumant_.__kumar?utm_source=ig_web_button_share_sheet&igsh=ZWI4bnJzM3F5N3Jo"><img src="./images/instagram.png" alt="" class="w-10 sm:w-12"></a></li>
+            <li><a href="https://www.linkedin.com/in/sumantkumar1111"><img src="./images/linkedin.png" alt="" class="w-8 sm:w-10"></a></li>
+            <li><a href="https://github.com/sumant11112004"><img src="./images/github.png" alt="" class="w-8 sm:w-10"></a></li>          
+        </ul>
+
+          <p class='text-lg text-gray-700'> Want to know more, just connect with me.</p>
+          <a href="#connect" class='border border-black py-3 px-6 text-lg hover:bg-black hover:text-white transition-all duration-500'>Connect Me</a>
+        </div>
+      </div>      
+    </div>
+
+
+    <!------------------Connect Me---------------->
+
+
+<div id="connect" class="w-full px-[12%] py-10 scroll-mt-15 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center">
+        <h4 class="text-center mb-2 text-lg">I'd love to hear from you!</h4>
+        <h2 class="text-center text-5xl">Get in Touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+            If you have any questions, inquiries, comments, feedback or just want to say Hi, please use the contact form below.
+        </p>
+
+        <form method="POST" action="https://api.web3forms.com/submit"  class="max-w-2xl mx-auto ">
+            <input type="hidden" name="access_key" value="420e9518-8880-44bc-a915-5181d248ffda">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8">
+                <input type="text" name="name" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" required>
+
+                <input type="email" name="email" placeholder="Enter your Email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" required>
+            </div>
+
+            <textarea name="message" id="" rows="6" placeholder="Enter your querry" class="w-full p-4 outline-none border-gray-400 rounded-md bg-white mb-6" required></textarea>
+            
+            <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/70 text-white rounded-full mx-auto hover:bg-black duration-500">Submit Now
+                <img src="./images/right-arrow-white.png" alt="" class="w-4">
+            </button>
+        </form>
+</div>
+
+<!------------------Footer---------------->
+
+<div class="mt-15">
+    <div class="text-center">
+        <img src="./images/logo1.png" alt="" class="w-36 mx-auto mb-2">
+        <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="./images/mail_icon.png" alt="" class="w-6 ">
+            sumantkumar11112004@gmail.com
+        </div>
+    </div> 
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-4000 mx-[10%] mt-12 py-6">
+        <p> © 2025 Sumant Kumar. All rights reserved. </p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a href="https://www.instagram.com/sumant_.__kumar?utm_source=ig_web_button_share_sheet&igsh=ZWI4bnJzM3F5N3Jo">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/sumantkumar1111">LinkedIn</a></li>
+            <li><a href="https://github.com/sumant11112004">GitHub</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
